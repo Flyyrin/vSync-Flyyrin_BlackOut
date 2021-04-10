@@ -159,7 +159,10 @@ end, false)
 RegisterServerEvent("flyyrin:vSync_togle_blackOut")
 AddEventHandler("flyyrin:vSync_togle_blackOut", function(player)
     blackout = not blackout
-    TriggerEvent("flyyrin:console_print", "^1[Debug]^7: Blackout set to: " .. tostring(blackout) .. " By: " .. player .. ". Using ^2vSync")
+    Wait(0)
+    if Config.Enable_Debug then
+        TriggerEvent("flyyrin:console_print", "^1[Debug]^7: ^3Blackout set to: " .. tostring(blackout) .. " By: " .. player .. ". Using ^2vSync")
+    end
     TriggerEvent('vSync:requestSync')
 end)
 

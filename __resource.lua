@@ -8,3 +8,7 @@ client_scripts {
 server_scripts {
     'vs_server.lua',
 }
+
+shared_script {
+    '@Flyyrin_BlackOut/config.lua' --Added by github.com/Flyyrin for Flyyrin_BlackOut
+}
